@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+# Strip www from the domain
+RewriteCond %{HTTP_HOST} ^www\.mit-license\.org$ [NC]
+RewriteRule ^(.*)$ http://mit-license.org/$1 [R=301,L]
+</IfModule>
